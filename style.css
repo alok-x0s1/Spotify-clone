@@ -1,0 +1,349 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Poppins:wght@300;400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-bg-color: #000000;
+    --secondary-bg-color: #121212;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-bg-color);
+}
+
+main {
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #ffffff;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 13vh);
+    width: 23%;
+    background-color: transparent;
+    gap: 8px;
+}
+
+.left .top {
+    width: 100%;
+    min-height: 18%;
+    padding: 16px;
+    overflow: hidden;
+    background: var(--secondary-bg-color);
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 1rem;
+    cursor: pointer;
+}
+
+.top .logo img {
+    width: 6rem;
+    filter: grayscale(1);
+}
+
+.top .home {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+    font-family: 'lato', sans-serif;
+    font-size: 14px;
+}
+
+.top .home i {
+    font-size: 28px;
+    margin-right: 16px;
+}
+
+.left .bottom {
+    width: 100%;
+    height: 81%;
+    background: var(--secondary-bg-color);
+    border-radius: 6px;
+    overflow-y: scroll;
+    padding: 16px 12px;
+    font-family: 'poppins', sans-serif;
+}
+
+.bottom .library {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bottom .library i {
+    font-size: 24px;
+    font-weight: 100;
+    padding: 4px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.bottom .library p {
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Custom Slidbar */
+
+.bottom::-webkit-scrollbar {
+    width: 8px;
+}
+
+.right::-webkit-scrollbar {
+    width: 1px;
+}
+
+
+[data-prop="hover"]:hover {
+    background-color: #212121;
+}
+
+.playlist {
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.playlist p {
+    padding: 6px 12px;
+    background-color: #262626;
+    border-radius: 21px;
+    font-size: 14px;
+    margin-right: 6px;
+    cursor: pointer;
+}
+
+.recent {
+    margin-top: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.recent i {
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.div1 {
+    padding: 12px;
+    margin-top: 12px;
+    background-color: #282828;
+    border-radius: 6px;
+}
+
+.div1 h4 {
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.div1 p {
+    font-weight: 400;
+    margin-top: 6px;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+button {
+    border-radius: 32px;
+    padding: 8px 16px;
+    background-color: #ffffff;
+    font-family: 'poppins', sans-serif;
+    outline: none;
+    font-weight: 800;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.02);
+}
+
+.left-footer {
+    display: flex;
+    margin-top: 4rem;
+    justify-content: space-around;
+    flex-direction: column;
+    gap: 16px;
+    color: #878787;
+    background-color: transparent;
+}
+
+.left-footer p {
+    font-size: 10px;
+    cursor: pointer;
+}
+
+.right {
+    height: calc(100vh - 13vh);
+    width: 76%;
+    padding: 16px;
+    font-family: 'poppins', sans-serif;
+    background: var(--secondary-bg-color);
+    border-radius: 6px;
+    overflow-y: auto;
+}
+
+.main-footer {
+    margin-top: 4rem;
+}
+
+.right-footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.right-footer .foot-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.right-footer .foot-links a {
+    text-decoration: none;
+    color: #878787;
+    transition: 0.2s;
+}
+
+.right-footer .foot-links a:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+.right-footer .social-links i {
+    font-size: 20px;
+    padding: 8px;
+    margin-left: 8px;
+    border-radius: 50%;
+    background-color: #282828;
+    cursor: pointer;
+}
+
+.right-footer .social-links i:hover {  
+    background-color: #878787;
+}
+
+.copyright {
+    margin-bottom: 2rem;
+}
+
+.copyright p {
+    font-size: 14px;
+    color: #878787;
+}
+ 
+footer {
+    position: absolute;
+    background: linear-gradient(90deg, rgba(184,38,159,1) 5%, rgba(45,45,184,1) 42%, rgba(16,113,133,0.9585084033613446) 100%);
+    height: 11vh;
+    width: 100%;
+    font-family: 'poppins', sans-serif;
+    padding: 15px 21px;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #ffffff;
+}
+
+.box1 {
+    margin-top: 2rem;
+    cursor: pointer;
+    padding: 12px;
+    border-radius: 8px;
+    background-color: #1e1d1d;
+    width: 14rem;
+    position: relative;
+    transition: 0.2s;
+}
+
+.box1 img {
+    border-radius: 8px;
+    width: 100%;
+    height: 11rem;
+    background-size: contain;
+}
+
+.box1 h4 {
+    font-size: 14px;
+    margin: 8px 0;
+}
+
+.box1 p {
+    font-size: 14px;
+}
+
+.box1 i {
+    position: absolute;
+    font-size: 28px;
+    background-color: #1FDF64;
+    right: 16px;
+    top: 150px;
+    opacity: 0;
+    border-radius: 50%;
+    transition: all ease 0.4s;
+    padding: 10px;
+}
+
+.box1:hover {
+    background-color: #252525;
+}
+
+.box1:hover i {
+    opacity: 1;
+    transform: translateY(-20px);
+}
+
+.right-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.right-top-left i {
+    font-size: 25px;
+    background: #282828;
+    color: #878787;
+    padding: 6px;
+    margin-right: 6px;
+    cursor: not-allowed;
+    border-radius: 50%;
+}
+
+.right .right-top div > button i {
+    font-size: 18px;
+    margin-right: 6px;
+}
+
+.main-songs {
+    margin-bottom: 2rem;
+}
+
+.main-songs > div > p {
+    cursor: pointer;
+    font-size: 12px;
+    color: #878787;
+    font-weight: 800;
+}
+
+.main-songs > div > p:hover {
+    text-decoration: underline;
+}
